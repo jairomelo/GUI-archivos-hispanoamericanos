@@ -20,18 +20,21 @@ La manera más fácil de probar el prototipo es descargar la [última version](h
 
 ### Probar el prototipo desde el código fuente
 
-Para ejecutar el prototipo desde el código fuente, se debe tener instalado Python 3.8 o superior. Es ideal crear un entorno virtual para instalar las dependencias del proyecto. Para ello, se recomienda usar [virtualenv](https://pypi.org/project/virtualenv/).
+Para ejecutar el prototipo desde el código fuente, se debe tener instalado Python 3.8 o superior. 
 
-Una vez instalado, se debe crear un entorno virtual y activarlo. Luego, se debe instalar las dependencias del proyecto con el comando `pip install -r requirements.txt`.
-
-Finalmente, se debe ejecutar el script `start.py` para instalar la aplicación.
+Antes de ejecutar el código, se debe instalar las dependencias del proyecto. Para ello, se debe abrir una terminal en el directorio `GUI-archivos-hispanoamericanos` y ejecutar el siguiente comando:
 
 ```bash
-python -m venv env
-env\Scripts\activate.bat
 pip install -r requirements.txt
-python start.py
 ```
+
+El archivo a ejecutar se encuentra en el directorio `archivo_colectivo` y se llama `__main__.py`. Para ejecutarlo, se debe abrir una terminal en el directorio `archivo_colectivo` y ejecutar el siguiente comando:
+
+```bash
+python __main__.py
+```
+
+También es factible ejecutar directamente este prototipo con el ejecutable `start.exe` que se encuentra en la raíz del proyecto, aunque puede ser tardado porque evalúa las versiones de Python instaladas en el sistema e intenta crear un entorno virtual con la versión más reciente.
 
 ## Contribuciones
 
