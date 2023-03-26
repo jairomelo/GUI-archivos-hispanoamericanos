@@ -1,0 +1,7 @@
+__title__ = 'Archivo Colectivo'
+__description__ = 'Aplicación para apoyar la administración de documentos provenientes de diferentes archivos digitales de hispanoamérica.'
+__version__ = '0.1.0-beta'
+__author__ = 'Jairo Antonio Melo'
+__author_email__ = 'jairoantoniomelo@gmail.com'
+__license__ = 'GNU General Public License v3.0'
+__url__ = 'https://github.com/jairomelo/GUI-archivos-hispanoamericanos'

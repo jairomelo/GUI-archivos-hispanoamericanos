@@ -18,6 +18,9 @@ logging.basicConfig(filename='logs/paress2.log', level=logging.ERROR,
                     format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S')
 
 
+ASSETS_FOLDER = os.path.join(os.path.dirname(os.path.realpath(__file__)), "assets")
+
+
 class App(tk.Tk):
 
     app_restarting = False
@@ -31,14 +34,14 @@ class App(tk.Tk):
         self.geometry("720x550")
         self.resizable(True, True)
         self.iconphoto(False, tk.PhotoImage(
-            file=self.resource_path("assets/icon.png")))
+            file=self.resource_path(os.path.join(ASSETS_FOLDER, "icon.png"))))
         self.configure(bg="white")
 
         # create a widget in the top of the window with the logo image an a title label
         self.top_frame = tk.Frame(self, bg="white")
         self.top_frame.pack(side="top", fill="both", expand=True)
 
-        self.logo = tk.PhotoImage(file=self.resource_path("assets/icon.png"))
+        self.logo = tk.PhotoImage(file=self.resource_path(os.path.join(ASSETS_FOLDER, "icon.png")))
         # tamaño de la imagen: 100x100
         self.logo = self.logo.subsample(2, 2)
         self.logo_label = tk.Label(self.top_frame, image=self.logo, bg="white")
@@ -106,7 +109,7 @@ class App(tk.Tk):
         # botón para descargar
         self.download_button = tk.Button(
             self.middle_frame, text="Descargar", command=self.download)
-        self.download_button.grid(row=0, column=2, rowspan=3, padx=10, pady=10)
+        self.download_button.grid(row=3, column=1, rowspan=3, padx=10, pady=10)
 
         # bottom_frame
         self.bottom_frame = tk.Frame(self, bg="white")
@@ -294,7 +297,7 @@ class App(tk.Tk):
         ventana.geometry("500x300")
         ventana.resizable(False, False)
 
-        ventana.iconbitmap(self.resource_path("assets/icon.ico"))
+        ventana.iconbitmap(self.resource_path(os.path.join(ASSETS_FOLDER, "icon.ico")))
 
         texto = tk.Text(ventana, height=10, width=50)
         texto.pack(expand=True, fill="both", padx=10, pady=10)
@@ -309,6 +312,8 @@ class App(tk.Tk):
 
 
 if __name__ == "__main__":
-    app = App()
+    """ app = App()
     sys.excepthook = app.mostrar_errores
-    app.mainloop()
+    app.mainloop() """
+    #print current working directory
+    
